@@ -206,7 +206,7 @@ const PurchaseCreate = () => {
 								onChange={handleChange}
 								options={values.productList.length > 0 ? values.productList : data?.extraData?.products}
 							/>
-							<div className="px-6 py-3 border-gray-200 flex items-center">
+							<div className="px-6 py-3 border-gray-200 flex items-center lg:w-1/3">
 								<LoadingButton type="button" className="btn-primary" onClick={() => addRow(values.product)}>
 									Add
 								</LoadingButton>
