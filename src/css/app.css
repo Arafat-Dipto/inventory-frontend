@@ -1,0 +1,198 @@
+/* Reset */
+@import "reset";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Components */
+@import "buttons";
+@import "form";
+@import "theme";
+
+/* Utilities */
+@import "tailwindcss/utilities";
+
+@import "react-datepicker/dist/react-datepicker.css";
+/* 
+@import "react-date-range/dist/styles.css";
+@import "react-date-range/dist/theme/default.css"; */
+
+/* Works on Firefox */
+/* * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(15 17 55, var(--tw-bg-opacity)) transparent;
+} */
+
+/* Works on Chrome, Edge, and Safari */
+/* *::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(15 17 55, var(--tw-bg-opacity));
+    border-radius: 20px;
+    border: 3px solid transparent;
+} */
+
+*::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #555;
+}
+
+/* Modal */
+
+.modal__backdrop {
+	background: rgba(0, 0, 0, 0.65);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* @include responsive-size(tab) {
+		background: #fff !important;
+	} */
+}
+
+.modal__container {
+	background: #fff;
+	border-radius: 5px;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	/* min-width: 650px;
+	max-width: 800px; */
+}
+
+.modal__title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.modal__closeButton {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	appearance: none;
+	outline: none;
+	appearance: none;
+	background: none;
+	border: 0;
+}
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.page-link:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.pagination-lg .page-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.pagination-lg .page-item:first-child .page-link {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.pagination-lg .page-item:last-child .page-link {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.pagination-sm .page-link {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.pagination-sm .page-item:last-child .page-link {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
