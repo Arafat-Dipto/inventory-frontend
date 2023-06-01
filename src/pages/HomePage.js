@@ -7,7 +7,7 @@ const HomePage = () => {
         <>
             <header className="bg-gray-800 py-4">
                 <div className="flex justify-between">
-                    <img src="/images/uniswap-uni-logo.png" alt="" style={{ width: '35px', height: "35px" }} />
+                    <img src="/images/uniswap-uni-logo.png" alt="" style={{ width: '35px', height: "35px" }} className="ml-5" />
                     <Link to="/login" className="mr-5 btn btn-primary">Login</Link>
                 </div>
                 {/* <h1 className="text-3xl text-white text-center">Inventory Management System</h1> */}

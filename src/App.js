@@ -18,7 +18,6 @@ import CategoryIndex from "./pages/Category/CategoryIndex";
 import Dashboard from "./pages/Dashboard";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
-import Organization from "./pages/Organization";
 import ProductCreate from "./pages/Product/ProductCreate";
 import ProductEdit from "./pages/Product/ProductEdit";
 import ProductIndex from "./pages/Product/ProductIndex";
@@ -45,9 +44,7 @@ function App() {
           <Route
             path={`/`}
             element={
-              <RequireAuth>
-                <HomePage />
-              </RequireAuth>
+              <HomePage />
             }
           />
           <Route
@@ -105,14 +102,6 @@ function App() {
             }
           />
           <Route
-            path={`/organization`}
-            element={
-              <RequireAuth>
-                <Organization />
-              </RequireAuth>
-            }
-          />
-          <Route
             path={`/suppliers`}
             element={
               <RequireAuth>
@@ -160,14 +149,6 @@ function App() {
               </RequireAuth>
             }
           />
-          {/* <Route
-            path={`/form`}
-            element={
-              <RequireAuth>
-                <Form />
-              </RequireAuth>
-            }
-          /> */}
           <Route path={`/login`} element={<Login />} />
           <Route path={`/register`} element={<Register />} />
         </Routes>
