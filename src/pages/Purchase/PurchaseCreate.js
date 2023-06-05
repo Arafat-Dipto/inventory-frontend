@@ -100,8 +100,6 @@ const PurchaseCreate = () => {
 
 	//new 
 	const addRow = (val) => {
-		console.log('v', val)
-		console.log('all', values.allProduct)
 		const productName = values.allProduct.find(
 			(product) => product.id === val
 		);
@@ -152,7 +150,7 @@ const PurchaseCreate = () => {
 			{ value: deletedRow.product_id, label: deletedRow.product_name },
 		])
 	};
-	console.log('prlist', values.allProduct)
+
 	function handleChangeItem(e, index) {
 		let changedItems = values.productsRow;
 		const key = e.target.name;
